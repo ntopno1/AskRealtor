@@ -71,6 +71,7 @@ public class MainActivity extends ActionBarActivity implements
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void restoreActionBar() {
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
