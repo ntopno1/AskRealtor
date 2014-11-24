@@ -71,6 +71,7 @@ public class MainActivity extends ActionBarActivity implements
 		}
 	}
 
+	//TODO: Find a better way to do this
 	@SuppressWarnings("deprecation")
 	public void restoreActionBar() {
 		ActionBar actionBar = getSupportActionBar();
@@ -98,10 +99,26 @@ public class MainActivity extends ActionBarActivity implements
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+	    switch (item.getItemId()) {
+        case R.id.action_new:
+            openNewQuestion();
+            return true;
+        case R.id.action_settings:
+            openSettings();
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+    }
+	}
+
+	private void openSettings() {
+		//TODO When you hit the settings button, calls a new activity
+		
+	}
+
+	private void openNewQuestion() {
+		//TODO When you hit the new question button, calls a new activity.
+		
 	}
 
 	/**
